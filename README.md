@@ -1,4 +1,4 @@
-# 🩸 Blood Donation Web App
+# 🩸 BloodLink Web App
 
 A full-stack web application that connects **blood donors** and **recipients**, featuring registration, donation tracking, eligibility checks, and more.
 
