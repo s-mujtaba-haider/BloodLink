@@ -47,8 +47,15 @@ A full-stack web application that connects **blood donors** and **recipients**, 
 
 3. Create a `.env` file in the `backend` folder and add your environment variables (e.g., MongoDB URI and JWT secret):
     ```env
-    MONGO_URI=your_mongodb_connection_string
-    JWT_SECRET=your_jwt_secret
+    MONGO_URI=your_mongo_uri_here
+    PORT=your_port_here
+    JWT_SECRET=your_jwt_secret_here
+
+    EMAIL_HOST=your_email_smtp_host
+    EMAIL_PORT=your_email_port
+    EMAIL_USER=your_email_username
+    EMAIL_PASS=your_email_password
+    EMAIL_FROM="YourAppName <your_email@example.com>"
     ```
 
 4. Run the backend server:
@@ -72,10 +79,10 @@ A full-stack web application that connects **blood donors** and **recipients**, 
 
 ## 📸 Screenshots
 
-1. Login : ![Screenshot](images/login.png)
-2. Register : ![Screenshot](images/register.png)
-3. Home : ![Screenshot](images/home.png)
-4. Profile : ![Screenshot](images/profile.png)
+1. Login ![Screenshot](images/login.png)
+2. Register ![Screenshot](images/register.png)
+3. Home ![Screenshot](images/home.png)
+4. Profile ![Screenshot](images/profile.png)
 
 ---
 
