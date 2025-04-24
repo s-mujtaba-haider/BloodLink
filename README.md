@@ -1,7 +1,3 @@
-Here’s a clean and concise `README.md` you can use for your project:
-
----
-
 # 🩸 Blood Donation Web App
 
 A full-stack web application that connects **blood donors** and **recipients**, featuring registration, donation tracking, eligibility checks, and more.
