@@ -1,8 +1,5 @@
 const BloodRequest = require('../models/BloodRequest');
 
-// @desc    Create a new blood request
-// @route   POST /api/requests
-// @access  Private
 const createRequest = async (req, res) => {
     const { bloodType, unitsRequired, hospital, location, contactNumber } = req.body;
 
@@ -22,9 +19,6 @@ const createRequest = async (req, res) => {
     }
 };
 
-// @desc    Get all blood requests
-// @route   GET /api/requests
-// @access  Private
 const getRequests = async (req, res) => {
     try {
         const requests = await BloodRequest.find().populate('requester', 'name email');
@@ -34,9 +28,6 @@ const getRequests = async (req, res) => {
     }
 };
 
-// @desc    Update a blood request
-// @route   PUT /api/requests/:id
-// @access  Private
 const updateRequest = async (req, res) => {
     try {
         const request = await BloodRequest.findById(req.params.id);
@@ -61,9 +52,7 @@ const updateRequest = async (req, res) => {
     }
 };
 
-// @desc    Delete a blood request
-// @route   DELETE /api/requests/:id
-// @access  Private
+
 const deleteRequest = async (req, res) => {
     try {
         const request = await BloodRequest.findById(req.params.id);

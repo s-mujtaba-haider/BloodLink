@@ -26,7 +26,6 @@ router.get("/donation-history", protect, async (req, res) => {
             return res.status(200).json({ message: "No donations found for this user." });
         }
 
-        // Make sure the frontend gets an object with a `donations` key
         res.status(200).json({ donations });
     } catch (error) {
         console.error("Error fetching donation history:", error);
@@ -39,7 +38,6 @@ router.get("/donation-history", protect, async (req, res) => {
 // POST Donate Blood
 router.post("/donate", protect, async (req, res) => {
     try {
-        console.log("Request Body:", req.body); // Debugging log
 
         const { recipientName, hospital, unitsDonated } = req.body;
 
@@ -64,13 +62,12 @@ router.post("/donate", protect, async (req, res) => {
             bloodType: user.bloodType,
             location: user.location,
             hospital,
-            unitsDonated,  // Ensuring units donated is stored
+            unitsDonated, 
             date: new Date(),
         });
 
         await donation.save();
 
-        // Update donor's total units donated
         user.totalUnitsDonated = (user.totalUnitsDonated || 0) + parseInt(unitsDonated);
         await user.save();
 

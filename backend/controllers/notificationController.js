@@ -10,9 +10,6 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-// @desc    Send notification email
-// @route   POST /api/notifications/email
-// @access  Private
 const sendNotificationEmail = async (req, res) => {
     const { email, subject, message } = req.body;
 

@@ -23,10 +23,10 @@ const donationSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        unitsDonated: {  // Added field for units donated
+        unitsDonated: { 
             type: Number,
             required: true,
-            min: 1, // Ensure at least 1 unit is donated
+            min: 1,
         },
         date: {
             type: Date,
