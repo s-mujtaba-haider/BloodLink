@@ -1,0 +1,143 @@
+.form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.info-column {
+    flex: 1 1 400px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.06);
+}
+
+.info-column h2 {
+    font-size: 28px;
+    color: #1977CC;
+    margin-bottom: 10px;
+}
+
+.info-column p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.info-column ul {
+    margin-top: 15px;
+    padding-left: 20px;
+    color: #444;
+}
+
+.info-column li {
+    margin-bottom: 10px;
+}
+
+.note {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #888;
+    font-style: italic;
+}
+
+.form-column {
+    flex: 1 1 450px;
+}
+
+.form-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.form-title {
+    font-size: 22px;
+    color: #1977CC;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.notification-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    color: #222;
+}
+
+.notification-form input,
+.notification-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    transition: 0.3s ease;
+}
+
+.notification-form input:focus,
+.notification-form textarea:focus {
+    border-color: #1977CC;
+    box-shadow: 0 0 6px rgba(230, 57, 70, 0.2);
+    outline: none;
+}
+
+.submit-btn {
+    background: #1977CC;
+    color: white;
+    font-size: 16px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #1977CC;
+}
+
+.response-message {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #155724;
+    text-align: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .form-wrapper {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info-column, .form-column {
+        width: 100%;
+    }
+
+    .info-column h2 {
+        text-align: center;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+}

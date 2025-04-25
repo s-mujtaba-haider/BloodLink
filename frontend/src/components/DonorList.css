@@ -1,0 +1,181 @@
+ 
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.donor-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.left-panel h1 {
+    font-size: 28px;
+    color: var(--title-color);
+    margin-bottom: 15px;
+}
+
+.left-panel p {
+    font-size: 16px;
+    color: var(--info-text);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.left-panel img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    flex: 2;
+    min-width: 340px;
+    max-width: 700px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.title {
+    font-size: 26px;
+    color: var(--title-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.donor-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.donor-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.donor-card:hover {
+    transform: scale(1.03);
+}
+
+.donor-icon {
+    font-size: 30px;
+    color: var(--accent-color);
+}
+
+.donor-card strong {
+    display: block;
+    font-size: 18px;
+    color: var(--accent-color);
+}
+
+.donor-card p {
+    margin: 4px 0;
+    font-size: 15px;
+    color: #444;
+}
+
+.donor-card span {
+    font-weight: bold;
+    color: #222;
+}
+
+.no-donors {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-top: 20px;
+}
+
+.error-message {
+    text-align: center;
+    font-size: 18px;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .donor-page {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .donor-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Mobile Only */
+@media screen and (max-width: 768px) {
+    .donor-page {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px 10px;
+        background: var(--bg-gradient);
+        min-height: 100vh;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .left-panel,
+    .right-panel {
+        flex: 1;
+        min-width: 300px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .donor-list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

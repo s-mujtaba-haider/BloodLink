@@ -1,0 +1,158 @@
+/* Outer container to center everything */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+/* Main login box */
+.login-page {
+    display: flex;
+    flex-direction: row; /* left-right layout */
+    width: 100%;
+    max-width: 1350px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Left side text */
+.info-section {
+    flex: 1;
+    padding: 50px;
+    background: #e8f4fa; /* or any soft accent */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #186583;
+}
+
+.info-section span {
+    color: #eb4e00;
+}
+
+.info-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-section li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Right side form */
+.form-section {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #186583;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #186583;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.login-box .message {
+    margin-top: 15px;
+    color: red;
+    font-size: 0.9rem;
+}
+
+/* ==============================
+   Mobile Responsive Design
+============================== */
+
+/* For tablets and mobile devices */
+@media (max-width: 768px) {
+    .login-page {
+        flex-direction: column; /* Stack sections vertically */
+        max-width: 100%; /* Allow full width */
+        padding: 20px;
+    }
+
+    .info-section,
+    .form-section {
+        padding: 20px;
+    }
+
+    .login-box {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .info-section h1 {
+        font-size: 2rem;
+    }
+
+    .info-section p {
+        font-size: 1rem;
+    }
+
+    .info-section ul li {
+        font-size: 0.9rem;
+    }
+}
+
+/* For small mobile screens */
+@media (max-width: 480px) {
+    .login-page {
+        padding: 15px;
+    }
+
+    .login-box {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .login-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .login-box input,
+    .login-box button {
+        font-size: 0.9rem;
+    }
+}
